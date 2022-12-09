@@ -9,13 +9,11 @@ const generateTarget = () => {
 const compareGuesses = (userGuess, computerGuess, secretNumber) => {
   if (userGuess >= 0 && userGuess <= 9) {
     const correctHumanGuess = getAbsoluteDistance(secretNumber, userGuess);
-    const correctComputerGuess = getAbsoluteDistance(
-      secretNumber,
-      computerGuess
+    const correctComputerGuess = getAbsoluteDistance(secretNumber,computerGuess
     );
     return correctHumanGuess <= correctComputerGuess;
   } else {
-    alert("Your input is out of range");
+    alert("Please enter a number between 0 and 9");
   }
 };
 
